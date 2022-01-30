@@ -70,3 +70,63 @@ main {
 .calculator {
   @include box-type($Blue);
 }
+
+@media screen and (min-width: 768px) {
+  main {
+    font-size: 1.5vw;
+
+    #heading {
+      font-size: 2.5vw;
+      margin-bottom: 0vh;
+    }
+
+    .intro {
+      margin: auto;
+      margin-bottom: 10vh;
+      width: 50vw;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .duo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box {
+    height: 30vh;
+    width: 27vw;
+    padding: 2vh 3vw;
+
+    b {
+      font-size: 2.5vw;
+    }
+
+    img {
+      float: right;
+      margin-top: 5vh;
+      height: 4vw;
+    }
+  }
+
+  .supervisor {
+    margin-right: 3vw;
+  }
+
+  .builder {
+    margin-bottom: 1.5vw;
+  }
+
+  .karma {
+    margin-top: 1.5vw;
+  }
+
+  .calculator {
+    margin-left: 3vw;
+  }
+}
