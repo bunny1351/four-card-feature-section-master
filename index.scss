@@ -1,5 +1,72 @@
 @import "./variables.scss";
 
+//mixin for different boxes
+
+@mixin box-type($color) {
+  border-top: 3px solid $color;
+  padding: 3vh 5vw;
+
+  b {
+    font-size: 1.1rem;
+  }
+
+  img {
+    display: flex;
+    float: right;
+    margin-top: 10vh;
+  }
+}
+
 body {
   font-family: $mainFont;
+  padding: 5vh 7vw;
+  text-align: center;
+  background: $veryLightGray;
+}
+
+main {
+  color: $grayishBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: $fontSize;
+
+  b {
+    color: $veryDarkBlue;
+  }
+
+  #heading {
+    font-size: 1.3rem;
+    margin-bottom: 3vh;
+  }
+
+  .intro {
+    margin-bottom: 10vh;
+  }
+}
+
+.box {
+  height: 40vh;
+  margin-bottom: 5vh;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px #666;
+  text-align: left;
+}
+
+//mixin used
+
+.supervisor {
+  @include box-type($Cyan);
+}
+
+.builder {
+  @include box-type($Red);
+}
+
+.karma {
+  @include box-type($Orange);
+}
+
+.calculator {
+  @include box-type($Blue);
 }
